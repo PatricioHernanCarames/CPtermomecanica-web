@@ -1,0 +1,12 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">C.P. Termomecanica</title>
+  <desc id="desc">Marca tecnica circular con simbolos de climatizacion y monitoreo.</desc>
+  <rect width="160" height="160" rx="32" fill="#0E1B2A"/>
+  <path d="M41 82C41 59.9 58.9 42 81 42C96.6 42 110.1 50.9 116.7 63.9" stroke="#38C6D9" stroke-width="10" stroke-linecap="round"/>
+  <path d="M119 78C119 100.1 101.1 118 79 118C63.9 118 50.7 109.6 43.9 97.2" stroke="#E9573F" stroke-width="10" stroke-linecap="round"/>
+  <path d="M81 57V101" stroke="#F8FAFC" stroke-width="8" stroke-linecap="round"/>
+  <path d="M62 79H100" stroke="#F8FAFC" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="81" cy="80" r="13" fill="#38C6D9"/>
+  <circle cx="122" cy="43" r="6" fill="#E9573F"/>
+  <circle cx="38" cy="117" r="6" fill="#38C6D9"/>
+</svg>
