@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="C.P. Termomecanica brinda soluciones de climatizacion y refrigeracion comercial, industrial, domiciliaria y de precision, con mantenimiento, automatizacion y monitoreo remoto.">
     <title>C.P. Termomecanica | Refrigeracion, climatizacion e IoT</title>
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem("cp-theme");
+          document.documentElement.dataset.theme = theme === "light" || theme === "dark" ? theme : "auto";
+        } catch (error) {
+          document.documentElement.dataset.theme = "auto";
+        }
+      })();
+    </script>
     <link rel="preload" href="assets/img/hero-industrial-v2.png" as="image">
     <link rel="stylesheet" href="css/styles.css">
   </head>
@@ -34,6 +44,11 @@
           <a href="#iot">Monitoreo IoT</a>
           <a href="#empresa">Empresa</a>
           <a href="#contacto">Contacto</a>
+          <div class="theme-switcher" role="group" aria-label="Tema visual">
+            <button type="button" data-theme-option="light" aria-label="Usar tema claro" title="Tema claro">&#9728;</button>
+            <button type="button" data-theme-option="auto" aria-label="Usar tema automatico" title="Tema automatico">A</button>
+            <button type="button" data-theme-option="dark" aria-label="Usar tema oscuro" title="Tema oscuro">&#9790;</button>
+          </div>
           <a class="button button-small button-outline" href="/clientes" data-client-access>Acceso clientes</a>
         </div>
       </nav>

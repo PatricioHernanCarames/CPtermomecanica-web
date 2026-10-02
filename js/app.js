@@ -6,6 +6,39 @@
   const portalNotice = document.querySelector("[data-portal-notice]");
   const apiStatus = document.querySelector("[data-api-status]");
   const year = document.querySelector("[data-current-year]");
+  const themeButtons = document.querySelectorAll("[data-theme-option]");
+  const themeStorageKey = "cp-theme";
+
+  function readTheme() {
+    const theme = document.documentElement.dataset.theme;
+    return theme === "light" || theme === "dark" ? theme : "auto";
+  }
+
+  function updateThemeControls(theme) {
+    themeButtons.forEach(function (button) {
+      const isActive = button.dataset.themeOption === theme;
+      button.setAttribute("aria-pressed", String(isActive));
+    });
+  }
+
+  function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    updateThemeControls(theme);
+
+    try {
+      localStorage.setItem(themeStorageKey, theme);
+    } catch (error) {
+      // The selected theme still applies when storage is unavailable.
+    }
+  }
+
+  updateThemeControls(readTheme());
+
+  themeButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      setTheme(button.dataset.themeOption);
+    });
+  });
 
   if (year) {
     year.textContent = new Date().getFullYear();
